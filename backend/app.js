@@ -27,7 +27,7 @@ app.use('/api/auth', authRoutes);
 
 // Serve frontend
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/signup.html'));
 });
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/login.html'));
