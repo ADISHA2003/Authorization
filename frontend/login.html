@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="app.css"> 
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .App {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Form Styling */
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Input Field Animations */
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      box-shadow: 0 0 8px rgba(72, 187, 120, 0.6); /* Green glow on focus */
+    }
+
+    /* Button Animation */
+    button[type="submit"] {
+      transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    /* Font Awesome Icons */
+    .grid-item form i {
+      position: absolute;
+      margin-top: 15px;
+      margin-left: 10px;
+      color: #999; /* Light gray color for icons */
+    }
+
+    /* Forgot Password Link */
+    .forgot-password {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="App">
+    <header class="App-header">
+      <h1>Login</h1>
+    </header>
+
+    <div class="grid-item">
+      <form id="login-form">
+        <div> 
+          <input type="email" id="login-email" placeholder="Email" required>
+        </div>
+        <div>
+          <input type="password" id="login-password" placeholder="Password" required>
+        </div>
+        <button type="submit">Login</button>
+        <a class="forgot-password" href="/forgot-password.html">Forgot Password?</a>
+        <p>Don't have an account? <a href="/signup.html">Signup</a></p> 
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
