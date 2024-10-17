@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
           if (response.ok) {
             alert('Signup successful! You can now log in.');
-            window.location.href = '/login.html'; // Redirect to login page
+            window.location.href = '/public/login.html'; // Redirect to login page
           } else {
             const errorData = await response.json();
             alert(`Signup failed: ${errorData.error}`);
@@ -56,11 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
           if (response.ok) {
             alert('Login successful!');
-            window.location.href = '/index.html'; // Redirect to home page after login
+            window.location.href = '/public/index.html'; // Redirect to home page after login
           } else {
             const errorData = await response.json();
             if (errorData.redirectToSignup) {
-              window.location.href = '/signup.html';
+              window.location.href = '/public/signup.html';
             } else {
               alert(`Login failed: ${errorData.message}`);
             }
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
           if (response.ok) {
             alert('Logout successful!');
-            window.location.href = '/login.html'; // Redirect to login after logout
+            window.location.href = '/public/login.html'; // Redirect to login after logout
           } else {
             alert('Logout failed. Try again.');
           }
@@ -151,7 +151,7 @@ if (forgotPasswordForm) {
   
           if (response.ok) {
             alert('Password reset successful! You can now log in with your new password.');
-            window.location.href = '/login.html'; 
+            window.location.href = '/public/login.html'; 
           } else {
             const errorData = await response.json();
             alert(`Password reset failed: ${errorData.error}`);
