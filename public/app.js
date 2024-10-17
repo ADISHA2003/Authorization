@@ -1,6 +1,6 @@
 // app.js
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'https://localhost:5000/api/auth'; // Update with your backend URL
+    const apiUrl = 'https://authorization-beta.vercel.app/api/auth'; // Update with your backend URL
   
     // Function to get the reset token from the URL
     const getResetToken = () => {
