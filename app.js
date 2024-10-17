@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // Session middleware
 app.use(
@@ -27,13 +27,13 @@ app.use('/api/auth', authRoutes);
 
 // Serve frontend
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/signup.html'));
+  res.sendFile(path.join(__dirname, '../public/signup.html'));
 });
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/login.html'));
+  res.sendFile(path.join(__dirname, '../public/login.html'));
 });
 app.get('/signup', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/signup.html'));
+  res.sendFile(path.join(__dirname, '../public/signup.html'));
 });
 
 // Start server
